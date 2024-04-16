@@ -44,7 +44,7 @@ func bfs():
 			if !child in frontier and !child in explored:
 				frontier.append(child)
 				came_from[child] = node
-				yield(get_tree().create_timer(0.1), "timeout")
+				yield(get_tree().create_timer(0.03), "timeout")
 				set_cellv(child, 2) #animate the search
 
 func get_neighborss(pos : Vector2): #helper function to get the neighbors
@@ -58,3 +58,6 @@ func get_neighborss(pos : Vector2): #helper function to get the neighbors
 				if !current in gray:
 					neighbors.append(pos + Vector2(x, y))
 	return neighbors
+
+func _on_Menu_pressed():
+	get_tree().change_scene("res://Menu.tscn")
