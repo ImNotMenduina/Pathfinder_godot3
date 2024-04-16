@@ -19,5 +19,13 @@ margin_right = 182.0
 margin_bottom = 265.0
 text = "BFS"
 
-[connection signal="pressed" from="DFS" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="BFS" to="." method="_on_Button2_pressed"]
+[node name="BID" type="Button" parent="."]
+margin_left = 45.0
+margin_top = 278.0
+margin_right = 183.0
+margin_bottom = 323.0
+text = "BID"
+
+[connection signal="pressed" from="DFS" to="." method="_on_DFS_pressed"]
+[connection signal="pressed" from="BFS" to="." method="_on_BFS_pressed"]
+[connection signal="pressed" from="BID" to="." method="_on_BID_pressed"]
